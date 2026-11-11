@@ -1,0 +1,275 @@
+html {
+  background-color: #fffffe88;
+  height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  background-color: #5d0036;
+  border-radius: 8px;
+}
+
+.nav a {
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav a[aria-current="page"] {
+  background-color: white;
+  color: #5d0036;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 14px;
+  border-top: 3px solid #5d0036;
+  text-align: center;
+  font-size: 14px;
+  color: #5d0036;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer a {
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #5d0036;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main-container > section {
+  max-width: 65ch;
+}
+
+h1,
+h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#name {
+  color: #5d0036;
+}
+
+/* paleta kolorów na stronie głównej */
+.palette {
+  margin: 24px 0;
+}
+
+.palette img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.palette figcaption {
+  margin-top: 6px;
+  font-size: 13px;
+  text-align: center;
+  color: #508484;
+}
+
+table {
+  /* "separate" zamiast "collapse" – przy collapse border-radius nie działa */
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid black;
+  border-radius: 8px;
+  overflow: hidden; /* przycina narożne komórki do zaokrąglenia */
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+  font-size: 15px;
+}
+
+/* każda komórka rysuje tylko prawą i dolną linię, ramkę zewnętrzną rysuje tabela */
+th,
+td {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+th {
+  background-color: #a8b17a;
+  color: white;
+  text-align: center;
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+  width: 12%;
+}
+
+th:last-child,
+td:last-child {
+  width: 52%;
+}
+
+/* kolory kafelków z palety */
+#box1 {
+  height: 200px;
+  width: 200px;
+  background-color: #508484; /* Pine Blue */
+}
+
+#box2 {
+  height: 200px;
+  width: 200px;
+  background-color: #c4b7cb; /* Thistle */
+  color: #0a100d; /* Onyx – na jasnym tle biały tekst byłby nieczytelny */
+}
+
+#box3 {
+  height: 200px;
+  width: 200px;
+  background-color: #0a100d; /* Onyx */
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+.tile:has(img) {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  overflow: hidden;
+}
+
+.tile img {
+  display: block;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.tile:has(img) span {
+  padding: 8px;
+}
+
+.tile-video {
+  padding: 0;
+  overflow: hidden;
+  cursor: default;
+}
+
+.tile-video:hover {
+  transform: none;
+}
+
+.tile-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+/* ---------- Formularz kontaktowy ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 90%;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+.contact-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 8px 10px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  font: inherit;
+  background-color: white;
+}
+
+.contact-form button {
+  margin-top: 16px;
+  align-self: flex-start;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5d0036;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #7d1a52;
+}

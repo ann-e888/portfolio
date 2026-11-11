@@ -1,0 +1,15 @@
+# Ustawienia edytora (VS Code) – lokalne, niepotrzebne na stronie
+.vscode/
+
+# Pliki systemowe
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Pliki tymczasowe i kopie zapasowe
+*.tmp
+*.bak
+*~
+
+# Logi
+*.log

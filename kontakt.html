@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="index.html">Strona główna</a>
+      <a href="o_mnie.html">O mnie</a>
+      <a href="doswiadczenie.html">Doświadczenie</a>
+      <a href="projekty.html">Projekty</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+    <header><h1>Kontakt</h1></header>
+    <main class="main-container">
+      <form
+        class="contact-form"
+        action="mailto:asiedlarz@student.agh.edu.pl"
+        method="post"
+        enctype="text/plain"
+      >
+        <label for="email">Twój e-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="np. jan.kowalski@example.com"
+          required
+        />
+
+        <label for="topic">Temat</label>
+        <select id="topic" name="topic" required>
+          <option value="" disabled selected>Wybierz temat</option>
+          <option value="wspolpraca">Współpraca</option>
+          <option value="projekty">Pytanie o projekty</option>
+          <option value="praca">Oferta pracy / stażu</option>
+          <option value="inne">Inne</option>
+        </select>
+
+        <label for="message">Wiadomość</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Napisz, w czym mogę pomóc…"
+          required
+        ></textarea>
+
+        <button type="submit">Wyślij</button>
+      </form>
+    </main>
+    <footer class="footer">
+      <p>Autorka: Anna Siedlarz</p>
+      <p>
+        <a href="mailto:asiedlarz@student.agh.edu.pl"
+          >asiedlarz@student.agh.edu.pl</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
